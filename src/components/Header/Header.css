@@ -1,0 +1,27 @@
+.header {
+  box-sizing: border-box;
+  min-height: 300px;
+  border-bottom: solid 3px #FF8C00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../img/header-back.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0;
+  font-family: 'Euclid Circular A';
+  font-weight: 600;
+  font-size: 3.5em;
+  background: linear-gradient(91.33deg, #89A3FF 0%, #FF6060 54.17%, #FFBF00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
