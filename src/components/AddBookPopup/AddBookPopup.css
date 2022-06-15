@@ -1,0 +1,30 @@
+.contact-form__input {
+  width: 300px;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: #ccc;
+  margin: 0;
+  border: 0;
+  border-radius: 10px;
+  border-bottom: solid rgb(77, 3, 3) 2px;
+  box-shadow: 0 2px 15px red;
+  outline: none;
+  font-family: 'Inter', 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.popup__input-error {
+  margin: 0;
+  padding: 0;
+  margin-left: 38px;
+  font-family: 'Inter', 'Arial', sans-serif;
+  color:  #FF0000;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  display: block;
+  min-height: 30px;
+}
+

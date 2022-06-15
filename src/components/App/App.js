@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import DataRow from '../DataRow/DataRow';
 import Footer from '../Footer/Footer';
 import RateCard from '../RateCard/RateCard';
+import AddBookPopup from "../AddBookPopup/AddBookPopup";
 
 import books from '../../constants/books';
 
@@ -14,7 +15,7 @@ import './App.css';
 
 const App = () => {
   const [selectedCard, setSelectedCard] = React.useState('');
-  const [addBookPopupOpen, setIsAddBookPopupOpen] = React.useState(false);
+  const [isAddBookPopupOpen, setIsAddBookPopupOpen] = React.useState(false);
   const [isEditBookData, setIsEditBookData] = React.useState(false);
   const [selectedBook, setSelectedBook] = React.useState(null);
   const[indexElement, setIndexElement] = React.useState(null);
@@ -98,9 +99,11 @@ const App = () => {
             {items.map((item) => {
               return (
                 <DataRow
-                  key={item.ID}
+                  key={item.id}
                   book={item}
                   onRowClick={handleCardClick}
+                  onCardDelete={handleCardDelete}
+                  onEditCard={handleEditBookData}
                 />
               );
             })}
@@ -118,6 +121,13 @@ const App = () => {
       <RateCard
         card={selectedCard}
         onClose={closeCard}
+      />
+      <AddBookPopup
+        isOpen={isAddBookPopupOpen}
+        onClose={closeAllPopups}
+        onAddBook={isEditBookData ? handleChangeBookData : handleAddBookSubmit}
+        isEdit={isEditBookData}
+        card={selectedBook}
       />
     </>
   );

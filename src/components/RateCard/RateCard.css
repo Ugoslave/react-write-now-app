@@ -98,67 +98,9 @@
   font-size: 2.5em;
 }
 
-.rate-card__code-box {
-  margin: 0;
-  width: 80%;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-
-.rate-card__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  font-weight: 500;
-  font-size: 1em;
-}
-
 .rate-card__arrow {
   padding-left: 30px;
   width: 70px;
   height: 70px;
   animation: arrow-move 5s alternate infinite ease-in-out;
 }
-
-.rate-card__code {
-  margin: 0;
-  padding-top: 10px;
-  font-weight: bold;
-  font-size: 1.3em;
-  text-shadow: 2px 2px 15px mintcream;
-}
-
-.rate-card__code:first-child {
-  padding-top: 0;
-  color: mintcream;
-  text-shadow: 2px 2px 15px #00BFFF;
-}
-
-.rate-card__previous-rate-title {
-  margin: 0;
-  color: mintcream;
-  padding-top: 20px;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5em;
-  text-shadow: 2px 2px 15px #00BFFF;
-}
-
-.rate-card__rates-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-  font-weight: normal;
-  font-size: 1.3em;
-}
-
-.rate-card__rate {
-  margin: 0;
-  padding: 0;
-  padding-top: 20px;
-  border-bottom: solid 1px #E6E6FA;
-}
-
