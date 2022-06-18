@@ -19,34 +19,31 @@ const DataRow = ({ row, onRowClick, onCardDelete, onEditCard }) => {
   }
 
   return (
-    <li
-      className="data-row"
-      onClick={handleClick}
-    >
-      <ul className="data-row__list">
+    <li className="data-row">
+      <ul className="data-row__list" onClick={handleClick}>
         <li className="data-row__item-box data-row__item-box_content_code">
-          <p className="data-row__text">{book.author}</p>
+          <p className="data-row__text">{row.author}</p>
         </li>
         <li className="data-row__item-box data-row__item-box_content_price">
-          <p className="data-row__text">{book.title}</p>
-        </li>
-        <li className="data-row__item-box data-row__item-box_content_ratio">
-          <button
-            type="button"
-            className="element__button"
-            onClick ={handleEditClick}
-          >
-            <img src={editButton} alt="Редактировать" />
-          </button>
-          <button
-            type="button"
-            className="element__button"
-            onClick={handleDeleteClick}
-          >
-            <img src={removeButton} alt="Удалить" />
-          </button>
+          <p className="data-row__text">{row.title}</p>
         </li>
       </ul>
+      <div className="data-row__button-box">
+        <button
+          type="button"
+          className="element__button"
+          onClick ={handleEditClick}
+        >
+          <img src={editButton} alt="Редактировать" />
+        </button>
+        <button
+          type="button"
+          className="element__button"
+          onClick={handleDeleteClick}
+        >
+          <img src={removeButton} alt="Удалить" />
+        </button>
+      </div>
     </li>
   );
 }

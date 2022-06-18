@@ -1,4 +1,6 @@
-import closeButton from "../../img/popup-closeButton.svg";
+import closeButton from "../../img/card-close-button.svg";
+
+import './PopupWithForm.css';
 
 const PopupWithForm = (props)=> {
   return (

@@ -64,7 +64,7 @@ const App = () => {
     const jsonNewBooks = JSON.stringify(newBookList);
 
     localStorage.setItem("list", jsonNewBooks);
-    setElements(newBookList);
+    setItems(newBookList);
     closeAllPopups();
   }
 
@@ -100,7 +100,7 @@ const App = () => {
               return (
                 <DataRow
                   key={item.id}
-                  book={item}
+                  row={item}
                   onRowClick={handleCardClick}
                   onCardDelete={handleCardDelete}
                   onEditCard={handleEditBookData}

@@ -1,5 +1,7 @@
-import PopupWithForm from "../PopupWithForm";
+import PopupWithForm from "../PopupWithForm/PopupWithForm";
 import React from "react";
+
+import './AddBookPopup.css';
 
 const AddBookPopup = ({ isOpen, onClose, onAddStaffer, isEdit, card }) => {
 

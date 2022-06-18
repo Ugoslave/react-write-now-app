@@ -27,7 +27,7 @@ const RateCard = ({ card, onClose }) => {
             {card ? card.title : ''}
           </p>
             <img
-              src='#'
+              src={card ? card.image : ''}
               alt="Обложка книги"
               className="rate-card__arrow"
             />
