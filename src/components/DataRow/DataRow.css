@@ -37,7 +37,7 @@
 }
 
 .data-row:nth-of-type(2n) {
-  background-color: #F5FFFA;
+  background-color: #cbfce3;
 }
 
 .data-row__list {
@@ -77,7 +77,7 @@
   align-items: center;
   justify-content: center;
   flex-grow: .05;
-  z-index: 2;
+  z-index: 3;
 }
 
 .element__button {
