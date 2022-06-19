@@ -5,7 +5,6 @@ import './DataRow.css';
 
 
 const DataRow = ({ row, onRowClick, onCardDelete, onEditCard }) => {
-
   const handleClick = () => {
     onRowClick(row);
   }
@@ -39,6 +38,7 @@ const DataRow = ({ row, onRowClick, onCardDelete, onEditCard }) => {
         <button
           type="button"
           className="element__button"
+          id={row.id}
           onClick={handleDeleteClick}
         >
           <img src={removeButton} alt="Удалить" />

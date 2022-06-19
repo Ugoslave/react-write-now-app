@@ -18,15 +18,12 @@ const App = () => {
   const [isAddBookPopupOpen, setIsAddBookPopupOpen] = React.useState(false);
   const [isEditBookData, setIsEditBookData] = React.useState(false);
   const [selectedBook, setSelectedBook] = React.useState(null);
-  const[indexElement, setIndexElement] = React.useState(null);
-  const [items, setItems] = React.useState([{
-    CharCode: "Please, waiting...",
-    Value: "Please, waiting...",
-    Previous: "Please, waiting...",
-  }]);
+  const [indexElement, setIndexElement] = React.useState(null);
+  const [newList, setNewList] = React.useState([]);
+  const [items, setItems] = React.useState([]);
 
-  const saveBookListInLocalStorage = () => {
-    const jsonBooks = JSON.stringify(books);
+  const saveBookListInLocalStorage = (list) => {
+    const jsonBooks = JSON.stringify(list);
 
     localStorage.setItem("list", jsonBooks);
   }
@@ -37,9 +34,13 @@ const App = () => {
     setItems(bookList);
   }
 
+  const removeBookListInLocalStorage = () => {
+    localStorage.removeItem("list");
+  }
+
   React.useEffect(() => {
-    saveBookListInLocalStorage();
-    getBookList();
+      saveBookListInLocalStorage(books);
+      getBookList();
   }, []);
 
   const handleAddBookClick = () => {
@@ -55,8 +56,19 @@ const App = () => {
   }
 
   const handleCardDelete = (evt) => {
+
     const targetElement = evt.target.closest(".data-row");
     targetElement.remove();
+
+    setIndexElement(books.findIndex(n => n.id === evt.currentTarget.id));
+    books.splice(indexElement, 1);
+
+    setNewList(books);
+
+    removeBookListInLocalStorage();
+    saveBookListInLocalStorage(newList);
+
+    console.log(JSON.parse(localStorage.getItem("list")));
   }
 
   const handleAddBookSubmit = (evt) => {
