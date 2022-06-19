@@ -34,7 +34,7 @@ const AddBookPopup = ({ isOpen, onClose, onAddStaffer, isEdit, card }) => {
 
   React.useEffect(() => {
     if (isEdit === true) {
-      setNewAuthorName(card.name);
+      setNewAuthorName(card.author);
       setNewTitle(card.title);
       setNewImageLink(card.image);
     }
@@ -51,8 +51,8 @@ const AddBookPopup = ({ isOpen, onClose, onAddStaffer, isEdit, card }) => {
   return (
     <PopupWithForm
       name="add-element"
-      title="Новая книга"
-      buttonText="Добавить"
+      title={isEdit ? "Изменение данных" : "Новая книга"}
+      buttonText={isEdit ? "Сохранить" : "Добавить"}
       isOpen={isOpen}
       onClose={onClose}
       onSubmit={handleSubmit}
