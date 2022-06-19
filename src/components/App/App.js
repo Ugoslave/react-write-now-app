@@ -38,8 +38,9 @@ const App = () => {
     localStorage.removeItem("list");
   }
 
+
   React.useEffect(() => {
-      saveBookListInLocalStorage(books);
+    saveBookListInLocalStorage(books);
       getBookList();
   }, []);
 
@@ -71,11 +72,19 @@ const App = () => {
     console.log(JSON.parse(localStorage.getItem("list")));
   }
 
-  const handleAddBookSubmit = (evt) => {
-    const newBookList = [evt, ...books];
-    const jsonNewBooks = JSON.stringify(newBookList);
+  const closeAllPopups = () => {
+    setIsAddBookPopupOpen(false);
+    setSelectedCard(null);
+    setIsEditBookData(false);
+    setIndexElement(null);
+  }
 
-    localStorage.setItem("list", jsonNewBooks);
+  const handleAddBookSubmit = (evt) => {
+    const newBookList = [evt, ...items];
+
+    removeBookListInLocalStorage();
+    saveBookListInLocalStorage(newBookList);
+
     setItems(newBookList);
     closeAllPopups();
   }
@@ -87,12 +96,7 @@ const App = () => {
     setIndexElement(books.findIndex(n => n.id === evt.id));
   }
 
-  const closeAllPopups = () => {
-    setIsAddBookPopupOpen(false);
-    setSelectedCard(null);
-    setIsEditBookData(false);
-    setIndexElement(null);
-  }
+
 
   const handleChangeBookData = (evt) => {
     books.splice(indexElement, 1, evt);

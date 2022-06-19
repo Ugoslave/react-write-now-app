@@ -55,7 +55,7 @@
   margin-top: 7vh;
   border-radius: 20px;
   border-bottom: solid rgb(29, 3, 122) 2px;
-  box-shadow: 0 0 30px blue;
+  box-shadow: 0 0 30px #00BFFF;
   background-color: #000;
   color: #fff;
   display: flex;

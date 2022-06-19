@@ -3,7 +3,7 @@ import React from "react";
 
 import './AddBookPopup.css';
 
-const AddBookPopup = ({ isOpen, onClose, onAddStaffer, isEdit, card }) => {
+const AddBookPopup = ({ isOpen, onClose, onAddBook, isEdit, card }) => {
 
   const [newImageLink, setNewImageLink] = React.useState("");
   const [newAuthorName, setNewAuthorName] = React.useState("");
@@ -24,9 +24,9 @@ const AddBookPopup = ({ isOpen, onClose, onAddStaffer, isEdit, card }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    onAddStaffer({
+    onAddBook({
       id: `${Math.floor(Math.random() * 76352087)}`,
-      name: newAuthorName,
+      author: newAuthorName,
       title: newTitle,
       image: newImageLink,
     });
