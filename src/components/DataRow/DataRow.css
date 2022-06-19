@@ -59,7 +59,7 @@
   z-index: 2;
 }
 
-.data-row__item-box_content_code {
+.data-row__item-box_content_name {
   font-weight: 900;
   font-size: 20px;
 }
@@ -90,7 +90,6 @@
   padding: 0;
   outline: none;
   transition: opacity .7s ease;
-  /*box-shadow: 0 2px 5px #00BFFF;*/
 }
 
 .element__button:last-child {

@@ -20,10 +20,10 @@ const DataRow = ({ row, onRowClick, onCardDelete, onEditCard }) => {
   return (
     <li className="data-row">
       <ul className="data-row__list" onClick={handleClick}>
-        <li className="data-row__item-box data-row__item-box_content_code">
+        <li className="data-row__item-box data-row__item-box_content_name">
           <p className="data-row__text">{row.author}</p>
         </li>
-        <li className="data-row__item-box data-row__item-box_content_price">
+        <li className="data-row__item-box">
           <p className="data-row__text">{row.title}</p>
         </li>
       </ul>

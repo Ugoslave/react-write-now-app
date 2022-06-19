@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../Header/Header';
 import DataRow from '../DataRow/DataRow';
 import Footer from '../Footer/Footer';
-import RateCard from '../RateCard/RateCard';
+import BookCard from '../BookCard/BookCard';
 import AddBookPopup from "../AddBookPopup/AddBookPopup";
 
 import books from '../../constants/books';
@@ -11,7 +11,6 @@ import books from '../../constants/books';
 import addButton from "../../img/contacts-container-add-button.svg";
 
 import './App.css';
-
 
 const App = () => {
   const [selectedCard, setSelectedCard] = React.useState('');
@@ -57,19 +56,14 @@ const App = () => {
   }
 
   const handleCardDelete = (evt) => {
-
     const targetElement = evt.target.closest(".data-row");
-    targetElement.remove();
 
+    targetElement.remove();
     setIndexElement(books.findIndex(n => n.id === evt.currentTarget.id));
     books.splice(indexElement, 1);
-
     setNewList(books);
-
     removeBookListInLocalStorage();
     saveBookListInLocalStorage(newList);
-
-    console.log(JSON.parse(localStorage.getItem("list")));
   }
 
   const closeAllPopups = () => {
@@ -96,15 +90,11 @@ const App = () => {
     setIndexElement(books.findIndex(n => n.id === evt.id));
   }
 
-
-
   const handleChangeBookData = (evt) => {
     books.splice(indexElement, 1, evt);
     setItems(books);
     closeAllPopups();
   }
-
-
 
   return (
     <>
@@ -134,7 +124,7 @@ const App = () => {
         </section>
         <Footer />
       </div>
-      <RateCard
+      <BookCard
         card={selectedCard}
         onClose={closeCard}
       />

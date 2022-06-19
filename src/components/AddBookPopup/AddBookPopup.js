@@ -9,7 +9,6 @@ const AddBookPopup = ({ isOpen, onClose, onAddBook, isEdit, card }) => {
   const [newAuthorName, setNewAuthorName] = React.useState("");
   const [newTitle, setNewTitle] = React.useState("");
 
-
   const handleImageInputChange = (evt) => {
     setNewImageLink(evt.target.value);
   }
@@ -64,7 +63,7 @@ const AddBookPopup = ({ isOpen, onClose, onAddBook, isEdit, card }) => {
         id = "author-name"
         placeholder="Имя автора"
         minLength="1" maxLength="30"
-        className = "contact-form__input"
+        className = "popup__input"
         value={newAuthorName}
         onChange={handleNameInputChange}
       />
@@ -77,7 +76,7 @@ const AddBookPopup = ({ isOpen, onClose, onAddBook, isEdit, card }) => {
         placeholder="Название книги"
         minLength="1"
         maxLength="40"
-        className = "contact-form__input"
+        className = "popup__input"
         value={newTitle}
         onChange={handleTitleInputChange}
       />
@@ -88,7 +87,7 @@ const AddBookPopup = ({ isOpen, onClose, onAddBook, isEdit, card }) => {
         id = "book-image"
         placeholder="Ссылка на обложку"
         minLength="10"
-        className = "contact-form__input"
+        className = "popup__input"
         value={newImageLink}
         onChange={handleImageInputChange}
       />

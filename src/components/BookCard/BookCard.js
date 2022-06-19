@@ -2,9 +2,9 @@ import React from 'react';
 
 import closeBtn from '../../img/card-close-button.svg';
 
-import './RateCard.css';
+import './BookCard.css';
 
-const RateCard = ({ card, onClose }) => {
+const BookCard = ({ card, onClose }) => {
   return (
     <div className={card ? "card  card_active" : "card"}>
       <div className="card__container">
@@ -19,17 +19,17 @@ const RateCard = ({ card, onClose }) => {
             className="card__button-image"
           />
         </button>
-        <div className="rate-card">
-          <h2 className="rate-card__title">
+        <div className="card__data-box">
+          <h2 className="card__title">
             {card ? card.author : ''}
           </h2>
-          <p className="rate-card__subtitle">
+          <p className="card__subtitle">
             {card ? card.title : ''}
           </p>
             <img
               src={card ? card.image : ''}
               alt="Обложка книги"
-              className="rate-card__arrow"
+              className="card__image"
             />
         </div>
       </div>
@@ -37,4 +37,4 @@ const RateCard = ({ card, onClose }) => {
   );
 }
 
-export default RateCard;
+export default BookCard;

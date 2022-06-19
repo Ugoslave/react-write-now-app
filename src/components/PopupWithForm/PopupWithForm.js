@@ -27,14 +27,14 @@ const PopupWithForm = (props)=> {
           </h2>
           <form
             name={props.name}
-            className= "contact-form"
+            className= "book-form"
             noValidate
             onSubmit={props.onSubmit}
           >
             {props.children}
             <button
               type="submit"
-              className="contact-form__button"
+              className="book-form__button"
             >
               {props.buttonText}
             </button>
