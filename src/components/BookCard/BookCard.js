@@ -1,6 +1,7 @@
 import React from 'react';
 
 import closeBtn from '../../img/card-close-button.svg';
+import loader from '../../img/book-card-loader.gif';
 
 import './BookCard.css';
 
@@ -21,13 +22,13 @@ const BookCard = ({ card, onClose }) => {
         </button>
         <div className="card__data-box">
           <h2 className="card__title">
-            {card ? card.author : ''}
+            {card ? card.author : 'IT`S EMPTY NOW HERE, SORRY)'}
           </h2>
           <p className="card__subtitle">
-            {card ? card.title : ''}
+            {card ? card.title : 'DATA WERE HERE...'}
           </p>
             <img
-              src={card ? card.image : ''}
+              src={card ? card.image : loader}
               alt="Обложка книги"
               className="card__image"
             />

@@ -69,7 +69,7 @@ const books = [
     id: '0037655',
     author: 'Иван Сергеевич Тургенев',
     title: 'Ася',
-    image: 'https://images.unsplash.com/photo-1654524146040-f5d0f5075ad2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80',
+    image: 'https://images.unsplash.com/photo-1626453746494-d1a96a8e5389?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80',
   },
   {
     id: '0237240',

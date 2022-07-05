@@ -9,16 +9,16 @@ const AddBookPopup = ({ isOpen, onClose, onAddBook, isEdit, card }) => {
   const [newAuthorName, setNewAuthorName] = React.useState("");
   const [newTitle, setNewTitle] = React.useState("");
 
-  const handleImageInputChange = (evt) => {
-    setNewImageLink(evt.target.value);
-  }
-
   const handleNameInputChange = (evt) => {
     setNewAuthorName(evt.target.value);
   }
 
   const handleTitleInputChange = (evt) => {
     setNewTitle(evt.target.value);
+  }
+
+  const handleImageInputChange = (evt) => {
+    setNewImageLink(evt.target.value);
   }
 
   const handleSubmit = (evt) => {
